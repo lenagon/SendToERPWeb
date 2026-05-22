@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  https://appsforoffice.microsoft.com/lib/1/hosted/office.jsscript>
+</head>
+<body>
+  <h2>Test Add-in</h2>
+
+  <script>
+    Office.onReady(() => {
+      console.log("Office ready");
+    });
+
+    function onButton1Click(event) {
+      console.log("Button1 clicked");
+      alert("Кнопка 1 работает ✅");
+      event.completed();
+    }
+
+    function onButton2Click(event) {
+      alert("Кнопка 2 работает ✅");
+      event.completed();
+    }
+
+    function onButton3Click(event) {
+      alert("Кнопка 3 работает ✅");
+      event.completed();
+    }
+
+    Office.actions.associate("onButton1Click", onButton1Click);
+    Office.actions.associate("onButton2Click", onButton2Click);
+    Office.actions.associate("onButton3Click", onButton3Click);
+  </script>
+</body>
+</html>
