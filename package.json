@@ -1,0 +1,27 @@
+{
+  "name": "sendtoerp-web-addin",
+  "version": "1.0.0",
+  "description": "Outlook Web Add-in for sending data to ERP system",
+  "main": "taskpane.js",
+  "scripts": {
+    "start": "http-server -c-1 -p 8000",
+    "dev": "http-server -c-1 -p 8000",
+    "build": "echo 'No build step required for this static add-in'"
+  },
+  "keywords": [
+    "outlook",
+    "office",
+    "add-in",
+    "web",
+    "erp"
+  ],
+  "author": "lenagon",
+  "license": "MIT",
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lenagon/SendToERPWeb.git"
+  }
+}
