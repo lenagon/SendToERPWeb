@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OfficeApp xmlns="http://schemas.microsoft.com/office/appforoffice/1.1"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:type="MailAddinType"
+           minVersion="1.3">
+  <Id>12345678-1234-1234-1234-123456789012</Id>
+  <Version>1.0.0.0</Version>
+  <ProviderName>SendToERP Web Add-in</ProviderName>
+  <DefaultLocale>ru-RU</DefaultLocale>
+  <DisplayName DefaultValue="SendToERP"/>
+  <Description DefaultValue="Аддин для отправки данных в ERP систему"/>
+  <Hosts>
+    <Host xsi:type="MailHost">
+      <DesktopFormFactor>
+        <FunctionFile resid="functionFile"/>
+        <ExtensionPoint xsi:type="MessageReadCommandSurface">
+          <OfficeTab id="TabDefault">
+            <Group id="msgReadGroup">
+              <Label resid="groupLabel"/>
+              <Control xsi:type="Button" id="button1">
+                <Label resid="button1Label"/>
+                <Supertip>
+                  <Title resid="button1Label"/>
+                  <Description resid="button1Desc"/>
+                </Supertip>
+                <Action xsi:type="ExecuteFunction">
+                  <FunctionName>onButton1Click</FunctionName>
+                </Action>
+              </Control>
+              <Control xsi:type="Button" id="button2">
+                <Label resid="button2Label"/>
+                <Supertip>
+                  <Title resid="button2Label"/>
+                  <Description resid="button2Desc"/>
+                </Supertip>
+                <Action xsi:type="ExecuteFunction">
+                  <FunctionName>onButton2Click</FunctionName>
+                </Action>
+              </Control>
+              <Control xsi:type="Button" id="button3">
+                <Label resid="button3Label"/>
+                <Supertip>
+                  <Title resid="button3Label"/>
+                  <Description resid="button3Desc"/>
+                </Supertip>
+                <Action xsi:type="ExecuteFunction">
+                  <FunctionName>onButton3Click</FunctionName>
+                </Action>
+              </Control>
+            </Group>
+          </OfficeTab>
+        </ExtensionPoint>
+      </DesktopFormFactor>
+    </Host>
+  </Hosts>
+  <Resources>
+    <bt:Images>
+      <bt:Image id="icon16" DefaultValue="https://www.example.com/images/icon-16.png"/>
+      <bt:Image id="icon32" DefaultValue="https://www.example.com/images/icon-32.png"/>
+      <bt:Image id="icon80" DefaultValue="https://www.example.com/images/icon-80.png"/>
+    </bt:Images>
+    <bt:Urls>
+      <bt:Url id="functionFile" DefaultValue="https://www.example.com/taskpane.html"/>
+    </bt:Urls>
+    <bt:ShortStrings>
+      <bt:String id="groupLabel" DefaultValue="Отправить в ERP"/>
+      <bt:String id="button1Label" DefaultValue="Кнопка 1"/>
+      <bt:String id="button2Label" DefaultValue="Кнопка 2"/>
+      <bt:String id="button3Label" DefaultValue="Кнопка 3"/>
+    </bt:ShortStrings>
+    <bt:LongStrings>
+      <bt:String id="button1Desc" DefaultValue="Нажмите для выполнения первого действия"/>
+      <bt:String id="button2Desc" DefaultValue="Нажмите для выполнения второго действия"/>
+      <bt:String id="button3Desc" DefaultValue="Нажмите для выполнения третьего действия"/>
+    </bt:LongStrings>
+  </Resources>
+</OfficeApp>
