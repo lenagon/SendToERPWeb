@@ -17,32 +17,53 @@
           <OfficeTab id="TabDefault">
             <Group id="msgReadGroup">
               <Label resid="groupLabel"/>
+              
+              <!-- Кнопка 1: Отправить заказ -->
               <Control xsi:type="Button" id="button1">
                 <Label resid="button1Label"/>
                 <Supertip>
                   <Title resid="button1Label"/>
                   <Description resid="button1Desc"/>
                 </Supertip>
+                <Icon>
+                  <bt:Image size="16" resid="button1Icon16"/>
+                  <bt:Image size="32" resid="button1Icon32"/>
+                  <bt:Image size="80" resid="button1Icon80"/>
+                </Icon>
                 <Action xsi:type="ExecuteFunction">
                   <FunctionName>onButton1Click</FunctionName>
                 </Action>
               </Control>
+              
+              <!-- Кнопка 2: Отправить счет -->
               <Control xsi:type="Button" id="button2">
                 <Label resid="button2Label"/>
                 <Supertip>
                   <Title resid="button2Label"/>
                   <Description resid="button2Desc"/>
                 </Supertip>
+                <Icon>
+                  <bt:Image size="16" resid="button2Icon16"/>
+                  <bt:Image size="32" resid="button2Icon32"/>
+                  <bt:Image size="80" resid="button2Icon80"/>
+                </Icon>
                 <Action xsi:type="ExecuteFunction">
                   <FunctionName>onButton2Click</FunctionName>
                 </Action>
               </Control>
+              
+              <!-- Кнопка 3: Отправить отчет -->
               <Control xsi:type="Button" id="button3">
                 <Label resid="button3Label"/>
                 <Supertip>
                   <Title resid="button3Label"/>
                   <Description resid="button3Desc"/>
                 </Supertip>
+                <Icon>
+                  <bt:Image size="16" resid="button3Icon16"/>
+                  <bt:Image size="32" resid="button3Icon32"/>
+                  <bt:Image size="80" resid="button3Icon80"/>
+                </Icon>
                 <Action xsi:type="ExecuteFunction">
                   <FunctionName>onButton3Click</FunctionName>
                 </Action>
@@ -55,23 +76,34 @@
   </Hosts>
   <Resources>
     <bt:Images>
-      <bt:Image id="icon16" DefaultValue="https://www.example.com/images/icon-16.png"/>
-      <bt:Image id="icon32" DefaultValue="https://www.example.com/images/icon-32.png"/>
-      <bt:Image id="icon80" DefaultValue="https://www.example.com/images/icon-80.png"/>
+      <!-- Иконки для кнопки 1 (Отправить заказ) -->
+      <bt:Image id="button1Icon16" DefaultValue="https://raw.githubusercontent.com/lenagon/SendToERPWeb/main/icons/send-16.png"/>
+      <bt:Image id="button1Icon32" DefaultValue="https://raw.githubusercontent.com/lenagon/SendToERPWeb/main/icons/send-32.png"/>
+      <bt:Image id="button1Icon80" DefaultValue="https://raw.githubusercontent.com/lenagon/SendToERPWeb/main/icons/send-80.png"/>
+      
+      <!-- Иконки для кнопки 2 (Отправить счет) -->
+      <bt:Image id="button2Icon16" DefaultValue="https://raw.githubusercontent.com/lenagon/SendToERPWeb/main/icons/archive-16.png"/>
+      <bt:Image id="button2Icon32" DefaultValue="https://raw.githubusercontent.com/lenagon/SendToERPWeb/main/icons/archive-32.png"/>
+      <bt:Image id="button2Icon80" DefaultValue="https://raw.githubusercontent.com/lenagon/SendToERPWeb/main/icons/archive-80.png"/>
+      
+      <!-- Иконки для кнопки 3 (Отправить отчет) -->
+      <bt:Image id="button3Icon16" DefaultValue="https://raw.githubusercontent.com/lenagon/SendToERPWeb/main/icons/app-16.png"/>
+      <bt:Image id="button3Icon32" DefaultValue="https://raw.githubusercontent.com/lenagon/SendToERPWeb/main/icons/app-32.png"/>
+      <bt:Image id="button3Icon80" DefaultValue="https://raw.githubusercontent.com/lenagon/SendToERPWeb/main/icons/app-80.png"/>
     </bt:Images>
     <bt:Urls>
-      <bt:Url id="functionFile" DefaultValue="https://www.example.com/taskpane.html"/>
+      <bt:Url id="functionFile" DefaultValue="https://raw.githubusercontent.com/lenagon/SendToERPWeb/main/taskpane.html"/>
     </bt:Urls>
     <bt:ShortStrings>
       <bt:String id="groupLabel" DefaultValue="Отправить в ERP"/>
-      <bt:String id="button1Label" DefaultValue="Кнопка 1"/>
-      <bt:String id="button2Label" DefaultValue="Кнопка 2"/>
-      <bt:String id="button3Label" DefaultValue="Кнопка 3"/>
+      <bt:String id="button1Label" DefaultValue="Отправить заказ"/>
+      <bt:String id="button2Label" DefaultValue="Отправить счет"/>
+      <bt:String id="button3Label" DefaultValue="Отправить отчет"/>
     </bt:ShortStrings>
     <bt:LongStrings>
-      <bt:String id="button1Desc" DefaultValue="Нажмите для выполнения первого действия"/>
-      <bt:String id="button2Desc" DefaultValue="Нажмите для выполнения второго действия"/>
-      <bt:String id="button3Desc" DefaultValue="Нажмите для выполнения третьего действия"/>
+      <bt:String id="button1Desc" DefaultValue="Отправить содержимое письма как заказ в ERP систему"/>
+      <bt:String id="button2Desc" DefaultValue="Отправить содержимое письма как счет в ERP систему"/>
+      <bt:String id="button3Desc" DefaultValue="Отправить содержимое письма как отчет в ERP систему"/>
     </bt:LongStrings>
   </Resources>
 </OfficeApp>
